@@ -6,10 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
-  console.log(env.VITE_APP_BASE); // тут я получаю / а как я пойму что при деплое на gh-pages путь станет /repo-name/
-
   return {
-    base: env.VITE_APP_BASE || '/',
+    base: process.env.VITE_APP_BASE_PATH || env.VITE_APP_BASE_PATH || '/',
     plugins: [vue(), tailwindcss()],
     resolve: {
       alias: {
