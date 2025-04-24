@@ -4,7 +4,7 @@ import { ShieldCheckIcon } from '@heroicons/vue/24/solid';
 </script>
 
 <template>
-  <div class="bg-[url('./images/img.jpg')] bg-center bg-cover h-screen">
+  <div class="bg-[url('/images/img.jpg')] bg-center bg-cover h-screen">
     <header class="flex items-center justify-between container mx-auto p-4">
       <div class="flex items-center gap-2">
         <ShieldCheckIcon class="h-10 w-10 text-[#33a5ea]" />
