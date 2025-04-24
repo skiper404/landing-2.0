@@ -1,7 +1,17 @@
-<script setup></script>
+<script setup>
+import ForgotPassword from './pages/ForgotPassword.vue';
+import Login from './pages/Login.vue';
+import Register from './pages/Register.vue';
+import ResetPassword from './pages/ResetPassword.vue';
+import VerifyEmail from './pages/VerifyEmail.vue';
+import ConfirmPassword from './pages/ConfirmPassword.vue';
+</script>
 
 <template>
-  <div class="text-center text-5xl">Landing-2.0 (test dynamic base)</div>
-  <div class="text-center text-blue-500">GH pages</div>
-  <div class="text-center text-teal-500">Netlify</div>
+  <Register />
+  <Login />
+  <ForgotPassword />
+  <ResetPassword />
+  <VerifyEmail />
+  <ConfirmPassword />
 </template>
