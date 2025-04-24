@@ -6,19 +6,21 @@ import { ShieldCheckIcon, CheckCircleIcon } from '@heroicons/vue/24/solid';
 <template>
   <div class="bg-[url('/images/img.jpg')] bg-center bg-cover h-screen">
     <header class="flex items-center justify-between container mx-auto p-4">
-      <div class="flex items-center gap-2">
+      <router-link :to="{ name: 'Register' }" class="flex items-center gap-2">
         <ShieldCheckIcon class="h-10 w-10 text-[#33a5ea]" />
         <span class="font-black">Security</span>
-      </div>
+      </router-link>
       <div class="space-x-2">
-        <a href="#" class="shadow-2xl py-2 px-4 rounded-md bg-[#dddddd] hover:bg-[#50aeee]">Sign In</a>
-        <a href="#" class="shadow-2xl border py-2 px-4 rounded-md bg-[#33a5ea] text-white hover:bg-[#50aeee]">Sign Up</a>
+        <router-link :to="{ name: 'Login' }" class="border py-2 px-4 rounded-md bg-[#aaaaaa] text-white hover:bg-[#50aeee]">Sign In</router-link>
+        <router-link :to="{ name: 'Register' }" class="shadow-2xl border py-2 px-4 rounded-md bg-[#33a5ea] text-white hover:bg-[#50aeee]"
+          >Sign Up</router-link
+        >
       </div>
     </header>
-    <main class="flex flex-col gap-2 items-center container mx-auto mt-16">
+    <main class="flex flex-col gap-2 items-center container mx-auto mt-10 text-sm">
       <section class="flex flex-col gap-4 items-center py-2">
         <KeyIcon class="size-12 text-[#33a5ea]" />
-        <h1 class="font-bold text-3xl">Forgot password?</h1>
+        <h1 class="font-bold text-2xl">Forgot password?</h1>
       </section>
       <div class="flex flex-col gap-2 bg-gradient-to-b from-white to-orange-50 rounded-md shadow-2xl w-[400px] py-4">
         <section class="flex flex-col gap-2 px-8 py-2">
@@ -38,8 +40,10 @@ import { ShieldCheckIcon, CheckCircleIcon } from '@heroicons/vue/24/solid';
         </section>
 
         <section class="flex flex-col items-center gap-4 w-full px-8 py-2">
-          <a href="#" class="w-full border-2 border-[#33a5ea] px-4 py-2 my-2 rounded-md bg-[#33a5ea] text-center text-white hover:bg-[#50aeee]"
-            >Send Reset Link</a
+          <router-link
+            :to="{ name: 'ResetPassword' }"
+            class="w-full border-2 border-[#33a5ea] px-4 py-2 my-2 rounded-md bg-[#33a5ea] text-center text-white hover:bg-[#50aeee]"
+            >Send Reset Link</router-link
           >
         </section>
       </div>

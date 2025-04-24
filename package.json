@@ -14,12 +14,16 @@
     "@heroicons/vue": "^2.2.0",
     "@tailwindcss/vite": "^4.1.4",
     "tailwindcss": "^4.1.4",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
     "gh-pages": "^6.3.0",
+    "sharp": "^0.34.1",
+    "svgo": "^3.3.2",
     "vite": "^6.2.4",
+    "vite-plugin-image-optimizer": "^1.1.8",
     "vite-plugin-vue-devtools": "^7.7.2"
   }
 }

@@ -1,21 +1,21 @@
 <script setup>
-import { ArrowRightStartOnRectangleIcon, EnvelopeIcon, LockClosedIcon, UserCircleIcon } from '@heroicons/vue/24/outline';
+import { ArrowRightStartOnRectangleIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/vue/24/outline';
 import { ShieldCheckIcon, XCircleIcon } from '@heroicons/vue/24/solid';
 </script>
 
 <template>
   <div class="bg-[url('/images/img.jpg')] bg-center bg-cover h-screen">
     <header class="flex items-center justify-between container mx-auto p-4">
-      <div class="flex items-center gap-2">
+      <router-link :to="{ name: 'Register' }" class="flex items-center gap-2">
         <ShieldCheckIcon class="h-10 w-10 text-[#33a5ea]" />
         <span class="font-black">Security</span>
-      </div>
-      <a href="#" class="border py-2 px-4 rounded-md bg-[#33a5ea] text-white hover:bg-[#50aeee]">Sign In</a>
+      </router-link>
+      <router-link :to="{ name: 'Register' }" class="border py-2 px-4 rounded-md bg-[#33a5ea] text-white hover:bg-[#50aeee]">Sign Up</router-link>
     </header>
-    <main class="flex flex-col gap-2 items-center container mx-auto mt-16">
+    <main class="flex flex-col gap-2 items-center container mx-auto mt-10 text-sm">
       <section class="flex flex-col gap-4 items-center py-2">
         <ArrowRightStartOnRectangleIcon class="size-12 text-[#33a5ea]" />
-        <h1 class="font-bold text-3xl">Welcome back!</h1>
+        <h1 class="font-bold text-2xl">Welcome back!</h1>
       </section>
       <div class="flex flex-col gap-2 bg-gradient-to-b from-white to-orange-50 rounded-md shadow-2xl w-[400px] py-4">
         <section class="flex flex-col gap-2 px-8 py-2">
@@ -45,10 +45,13 @@ import { ShieldCheckIcon, XCircleIcon } from '@heroicons/vue/24/solid';
         <section class="flex flex-col items-center gap-4 w-full px-8 py-2">
           <div class="flex justify-between w-full">
             <div class="space-x-2"><input id="checkbox" type="checkbox" /> <label for="checkbox">Remember me</label></div>
-            <p class="text-[#33a5ea] hover:text-[#50aeee]">Forgot your password?</p>
+            <router-link :to="{ name: 'ForgotPassword' }" class="text-[#33a5ea] hover:text-[#50aeee]">Forgot your password?</router-link>
           </div>
-          <a href="#" class="w-full border-2 border-[#33a5ea] px-4 py-2 my-2 rounded-md bg-[#33a5ea] text-center text-white hover:bg-[#50aeee]"
-            >Sign In</a
+
+          <router-link
+            :to="{ name: 'Login' }"
+            class="w-full border-2 border-[#33a5ea] px-4 py-2 my-2 rounded-md bg-[#33a5ea] text-center text-white hover:bg-[#50aeee]"
+            >Sign In</router-link
           >
         </section>
       </div>
